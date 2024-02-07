@@ -53,16 +53,17 @@ Going Along with MySQL
     <p>
     AUTO_INCREMENT ID { CREATE TABLE bands (
     id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(255) NOT NULL
+    name VARCHAR(255) NOT NULL,
+    PRIMARY KEY(id)
     )}
     </p>
-  </li>
-  </br>
     <p>
       NOT NULL makes it mandatory to have that field in db
     </br>
       AUTO_INCREMENT increases id by 1 for new document in a table
     </p>
+    </br>
+    <p>PRIMARY KEY is used as the primary identfier in the table, querying on this field is fast than querying on other columns</p>
   </li>
   
 </ol>
