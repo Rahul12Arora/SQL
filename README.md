@@ -11,7 +11,7 @@ Going Along with MySQL
     <b>Start MySQL server with 
     <ol>
       <li>Homebrew { brew services start/restart mysql }</b></li>
-      <li><b>Start MySQL server from terminal { sudo mysqld }</b></li>
+      <li><b>Terminal { sudo mysqld }</b></li>
     </ol>
   </li>
   <li>
