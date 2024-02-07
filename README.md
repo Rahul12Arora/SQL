@@ -18,17 +18,22 @@ Going Along with MySQL
     <b>Run SQL command-line terminal { cd /usr/local/Cellar/mysql/8.3.0/bin(optional) ==>  mysql -u root -p passwordIfAny }</b>
   </li>
   <li>
-    <b>create a database { CREATE DATABASE your_database_name; }</b>
+    <b>create database { CREATE DATABASE your_database_name; }</b>
   </li>
   <li>
-    <b>use a database { USE your_database_name; }</b>
+    <b>use database { USE your_database_name; }</b>
   </li>
   <li>
-    <b>drop a database { DROP DATABASE your_database_name; }</b>
+    <b>drop database { DROP DATABASE your_database_name; }</b>
   </li>
   <li>
-    <b>ADD a TABLE { CREATE TABLE classRoom (
+    <b>ADD TABLE { CREATE TABLE classRoom (
       rollNo INT
+    ) ; }</b>
+  </li>
+  <li>
+    <b>EDIT TABLE { ALTER TABLE classRoom ADD COLUMN(
+      name VARCHAR(255)
     ) ; }</b>
   </li>
 </ol>
