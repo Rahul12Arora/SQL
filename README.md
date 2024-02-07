@@ -5,15 +5,15 @@ Relationship database with different tables, cross referencing each others entri
 Going Along with MySQL
 <ol>
   <li>
-    <h1>Install MySQL { brew install mysql }</h1>
+    <b>Install MySQL { brew install mysql }</b>
   </li>
 <ol>
   <li>
-    <h1>Start MySQL server with Homebrew { brew services start/restart mysql }</h1>
-    <h1>Start MySQL server from terminal { sudo mysqld }</h1>
+    <b>Start MySQL server with Homebrew { brew services start/restart mysql }</b>
+    <b>Start MySQL server from terminal { sudo mysqld }</b>
   </li>
 <ol>
   <li>
-    <h1>Run SQL command-line terminal { cd /usr/local/Cellar/mysql/8.3.0/bin(optional) ==>  mysql -u root -p passwordIfAny }</h1>
+    <b>Run SQL command-line terminal { cd /usr/local/Cellar/mysql/8.3.0/bin(optional) ==>  mysql -u root -p passwordIfAny }</b>
   </li>
 </ol>
