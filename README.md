@@ -61,7 +61,6 @@ Going Along with MySQL
       NOT NULL makes it mandatory to have that field in db
     </br>
       AUTO_INCREMENT increases id by 1 for new document in a table
-    </p>
     </br>
     <p>PRIMARY KEY is used as the primary identfier in the table, querying on this field is fast than querying on other columns</p>
   </li>
