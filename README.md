@@ -34,6 +34,6 @@ Going Along with MySQL
   <li>
     <b>EDIT TABLE { ALTER TABLE classRoom ADD COLUMN(
       name VARCHAR(255)
-    ) ; }</b>
+    ) ; }</b> //255 denotes the character limit length
   </li>
 </ol>
