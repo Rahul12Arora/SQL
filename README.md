@@ -6,63 +6,63 @@ Going Along with MySQL
 <ol>
   
   <li>
-    <b>Install MySQL { brew install mysql }</b>
+    <p>Install MySQL { brew install mysql }</p>
   </li>
   
   <li>
-    <b>Start MySQL server with 
+    <p>Start MySQL server with 
     <ol>
-      <li>Homebrew { brew services start/restart mysql }</b></li>
-      <li><b>Terminal { sudo mysqld }</b></li>
+      <li>Homebrew { brew services start/restart mysql }</p></li>
+      <li><p>Terminal { sudo mysqld }</p></li>
     </ol>
   </li>
       
   <li>
-    <b>Run SQL command-line terminal { cd /usr/local/Cellar/mysql/8.3.0/bin(optional) ==>  mysql -u root -p passwordIfAny }</b>
+    <p>Run SQL command-line terminal { cd /usr/local/Cellar/mysql/8.3.0/bin(optional) ==>  mysql -u root -p passwordIfAny }</p>
   </li>
       
   <li>
-    <b>CREATE database { CREATE DATABASE your_database_name; }</b>
+    <p>CREATE database { CREATE DATABASE your_database_name; }</p>
   </li>
       
   <li>
-    <b>USE database { USE your_database_name; }</b>
+    <p>USE database { USE your_database_name; }</p>
   </li>
       
   <li>
-    <b>DROP database { DROP DATABASE your_database_name; }</b>
+    <p>DROP database { DROP DATABASE your_database_name; }</p>
   </li>
       
   <li>
-    <b>ADD TABLE { CREATE TABLE classRoom (
+    <p>ADD TABLE { CREATE TABLE classRoom (
       rollNo INT
-    ) ; }</b>
+    ) ; }</p>
   </li>
       
   <li>
-    <b>EDIT TABLE { ALTER TABLE classRoom ADD COLUMN(
+    <p>EDIT TABLE { ALTER TABLE classRoom ADD COLUMN(
       name VARCHAR(255)
-    ) ; }</b> //255 denotes the character limit length
+    ) ; }</p> //255 denotes the character limit length
   </li>
   
   <li>
-    <b>DROP TABLE { DROP TABLE classRoom }</b>
+    <p>DROP TABLE { DROP TABLE classRoom }</p>
   </li>
 
   <li>
-    <b>
+    <p>
     AUTO_INCREMENT ID { CREATE TABLE bands (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     )}
-    </b>
+    </p>
   </li>
   </br>
-    <b>
+    <p>
       NOT NULL makes it mandatory to have that field in db
     </br>
       AUTO_INCREMENT increases id by 1 for new document in a table
-    </b>
+    </p>
   </li>
   
 </ol>
