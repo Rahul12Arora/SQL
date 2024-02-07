@@ -62,7 +62,8 @@ Going Along with MySQL
     </br>
       AUTO_INCREMENT increases id by 1 for new document in a table
     </br>
-    <p>PRIMARY KEY is used as the primary identfier in the table, querying on this field is fast than querying on other columns</p>
+    PRIMARY KEY is used as the primary identfier in the table, querying on this field is fast than querying on other columns
+    </p>
   </li>
   
 </ol>
