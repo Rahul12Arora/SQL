@@ -23,4 +23,12 @@ Going Along with MySQL
   <li>
     <b>use a database { USE your_database_name; }</b>
   </li>
+  <li>
+    <b>drop a database { DROP DATABASE your_database_name; }</b>
+  </li>
+  <li>
+    <b>ADD a TABLE { CREATE TABLE classRoom (
+      rollNo INT
+    ) ; }</b>
+  </li>
 </ol>
