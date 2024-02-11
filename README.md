@@ -92,3 +92,25 @@ CREATE TABLE album (
 
 INSERT INTO bands (name) VALUES('Iron Maiden'); // Add data to table
 ```
+
+**AI Table**
+
+
+| Command                             | Description                                            | Example                                                  |
+|-------------------------------------|--------------------------------------------------------|----------------------------------------------------------|
+| `CREATE DATABASE dbname;`            | Creates a new database.                                | `CREATE DATABASE mydatabase;`                              |
+| `USE dbname;`                       | Switches to a specific database.                       | `USE mydatabase;`                                         |
+| `SHOW DATABASES;`                   | Lists all databases on the server.                     | `SHOW DATABASES;`                                         |
+| `CREATE TABLE tablename (...);`     | Creates a new table.                                   | `CREATE TABLE users (id INT, name VARCHAR(255));`          |
+| `SHOW TABLES;`                      | Lists all tables in the current database.              | `SHOW TABLES;`                                            |
+| `DESCRIBE tablename;`               | Shows the structure of a table.                        | `DESCRIBE users;`                                         |
+| `INSERT INTO tablename VALUES (...);` | Inserts data into a table.                           | `INSERT INTO users VALUES (1, 'John'), (2, 'Jane');`       |
+| `SELECT * FROM tablename;`          | Retrieves all records from a table.                   | `SELECT * FROM users;`                                    |
+| `UPDATE tablename SET col=value WHERE condition;` | Updates existing records.                  | `UPDATE users SET name='Alice' WHERE id=1;`               |
+| `DELETE FROM tablename WHERE condition;`        | Deletes records from a table.                  | `DELETE FROM users WHERE id=2;`                            |
+| `ALTER TABLE tablename ADD COLUMN col datatype;` | Adds a new column to a table.                | `ALTER TABLE users ADD COLUMN email VARCHAR(255);`        |
+| `DROP TABLE tablename;`              | Deletes a table.                                       | `DROP TABLE users;`                                       |
+| `DROP DATABASE dbname;`             | Deletes a database.                                    | `DROP DATABASE mydatabase;`                               |
+| `GRANT privileges ON database.table TO 'user'@'host';` | Grants privileges to a user.            | `GRANT SELECT, INSERT ON mydatabase.* TO 'myuser'@'localhost';` |
+| `FLUSH PRIVILEGES;`                  | Reloads the privileges from the grant tables.          | `FLUSH PRIVILEGES;`                                       |
+
