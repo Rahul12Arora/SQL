@@ -65,6 +65,10 @@ Going Along with MySQL
     PRIMARY KEY is used as the primary identfier in the table, querying on this field is faster than querying on other columns
     </p>
   </li>
+
+  <li>
+    Use 'Execute SQL script to execute current line/selected code'
+  </li>
   
 </ol>
 
@@ -77,12 +81,14 @@ name VARCHAR(255) NOT NULL,
 PRIMARY KEY(id)
 );
 
-CREATE TABLE album(
-id INT NOT NULL AUTO_INCREMENT,
-name VARCHAR(255) NOT NULL,
-release_year INT,
-band_id INT NOT NULL,
-PRIMARY KEY(id),
-FOREIGN KEY(band_id) REFRENCES bands(id);
+CREATE TABLE album (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  release_year INT,
+  band_id INT NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (band_id) REFERENCES bands(id)
 );
+
+INSERT INTO bands (name) VALUES('Iron Maiden'); // Add data to table
 ```
