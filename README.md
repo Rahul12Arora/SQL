@@ -114,3 +114,38 @@ INSERT INTO bands (name) VALUES('Iron Maiden'); // Add data to table
 | `GRANT privileges ON database.table TO 'user'@'host';` | Grants privileges to a user.            | `GRANT SELECT, INSERT ON mydatabase.* TO 'myuser'@'localhost';` |
 | `FLUSH PRIVILEGES;`                  | Reloads the privileges from the grant tables.          | `FLUSH PRIVILEGES;`                                       |
 
+
+Examples:
+
+| Operation           | Description                                                               | Example                                                                                         |
+|---------------------|---------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| SELECT              | Retrieves data from one or more tables                                   | SELECT * FROM employees;                                                                       |
+| INSERT INTO         | Inserts new records into a table                                         | INSERT INTO employees (name, age) VALUES ('John', 30);                                           |
+| UPDATE              | Modifies existing records in a table                                     | UPDATE employees SET age = 31 WHERE name = 'John';                                               |
+| DELETE FROM         | Removes records from a table                                             | DELETE FROM employees WHERE name = 'John';                                                       |
+| CREATE TABLE        | Creates a new table in the database                                      | CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(50));                                   |
+| ALTER TABLE         | Modifies an existing table structure                                     | ALTER TABLE employees ADD COLUMN email VARCHAR(100);                                             |
+| DROP TABLE          | Deletes an entire table from the database                                | DROP TABLE employees;                                                                            |
+| JOIN                | Combines records from two or more tables based on a related column       | SELECT e.name, d.department_name FROM employees e JOIN departments d ON e.department_id = d.department_id; |
+| UNION               | Combines the results of two or more SELECT statements                     | SELECT name FROM employees UNION SELECT name FROM contractors;                                   |
+| GROUP BY            | Groups rows that have the same values into summary rows                  | SELECT department_id, AVG(salary) FROM employees GROUP BY department_id;                         |
+| ORDER BY            | Sorts the result set by one or more columns                              | SELECT * FROM employees ORDER BY salary DESC;                                                    |
+| WHERE               | Filters rows based on a condition                                        | SELECT * FROM employees WHERE age > 30;                                                          |
+| DISTINCT            | Returns unique values in the result set                                   | SELECT DISTINCT department_id FROM employees;                                                    |
+| HAVING              | Filters records returned by a GROUP BY clause based on specified conditions | SELECT department_id, AVG(salary) FROM employees GROUP BY department_id HAVING AVG(salary) > 50000; |
+| IN                  | Determines whether a specified value matches any value in a subquery result | SELECT * FROM employees WHERE department_id IN (SELECT department_id FROM departments WHERE location = 'New York'); |
+| EXISTS              | Tests for the existence of any records in a subquery                     | SELECT * FROM employees WHERE EXISTS (SELECT * FROM departments WHERE departments.department_id = employees.department_id); |
+| LIKE                | Searches for a specified pattern in a column                              | SELECT * FROM employees WHERE name LIKE 'J%';                                                   |
+| BETWEEN             | Selects values within a given range                                      | SELECT * FROM employees WHERE age BETWEEN 25 AND 35;                                            |
+| NOT                 | Negates a condition or expresses inequality                              | SELECT * FROM employees WHERE NOT age BETWEEN 25 AND 35;                                        |
+| COUNT               | Returns the number of rows in a result set or the number of occurrences of a specified value | SELECT COUNT(*) FROM employees;                                                             |
+| SUM                 | Calculates the sum of a set of values                                    | SELECT SUM(salary) FROM employees;                                                               |
+| AVG                 | Calculates the average of a set of values                                | SELECT AVG(salary) FROM employees;                                                               |
+| MAX                 | Returns the maximum value in a set of values                             | SELECT MAX(salary) FROM employees;                                                               |
+| MIN                 | Returns the minimum value in a set of values                             | SELECT MIN(salary) FROM employees;                                                               |
+| CONCAT              | Concatenates two or more strings                                          | SELECT CONCAT(first_name, ' ', last_name) AS full_name FROM employees;                           |
+| UPPER / LOWER       | Converts a string to uppercase / lowercase                                | SELECT UPPER(name) FROM employees;                                                               |
+| SUBSTRING / SUBSTR | Extracts a substring from a string                                        | SELECT SUBSTRING(name, 1, 3) FROM employees;                                                     |
+| CASE                | Performs conditional logic in a query                                     | SELECT name, CASE WHEN age < 18 THEN 'Minor' WHEN age >= 18 AND age < 65 THEN 'Adult' ELSE 'Senior' END AS age_group FROM employees; |
+| TRUNCATE TABLE      | Removes all rows from a table, but keeps the table structure intact      | TRUNCATE TABLE employees;                                                                        |
+
