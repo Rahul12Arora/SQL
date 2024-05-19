@@ -149,3 +149,80 @@ Examples:
 | CASE                | Performs conditional logic in a query                                     | SELECT name, CASE WHEN age < 18 THEN 'Minor' WHEN age >= 18 AND age < 65 THEN 'Adult' ELSE 'Senior' END AS age_group FROM employees; |
 | TRUNCATE TABLE      | Removes all rows from a table, but keeps the table structure intact      | TRUNCATE TABLE employees;                                                                        |
 
+```
+CREATE TABLE bands(
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(255) NOT NULL,
+PRIMARY KEY(id)
+);
+
+CREATE TABLE album (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  release_year INT,
+  band_id INT,
+  PRIMARY KEY (id),
+  FOREIGN KEY (band_id) REFERENCES bands(id)
+);
+
+INSERT INTO bands (name)
+VALUES ('Kaash'), ('Jal'), ('Kismat');
+
+INSERT INTO bands (name)
+VALUES ('band with no album');
+
+SELECT * FROM bands;
+
+SELECT name FROM bands LIMIT 2;
+
+SELECT id as ID, name as 'BAND NAME'
+FROM bands;
+
+SELECT * FROM bands ORDER BY name DESC;
+
+INSERT INTO album (name, release_year, band_id) VALUES
+('tujhe bhula diya', 2009, null);
+
+
+SELECT DISTINCT name FROM album;
+
+UPDATE album
+SET release_year = 2009
+WHERE release_year = 2011;
+
+SELECT * FROM album;
+
+SELECT * FROM album
+WHERE release_year <= 2007;
+
+SELECT * FROM album
+WHERE name LIKE '%aa%' AND release_year = 2001;
+
+SELECT * FROM album
+WHERE release_year BETWEEN 2003 AND 2008;
+
+SELECT * FROM album
+WHERE release_year IS NULL;
+
+DELETE FROM album WHERE id = 6;
+
+SELECT * FROM bands
+JOIN album ON bands.id = album.band_id; 
+
+INSERT INTO bands (name)
+VALUES ('KK');
+
+SELECT * FROM bands
+LEFT JOIN album on bands.id = album.band_id;
+
+SELECT * FROM bands
+RIGHT JOIN album on bands.id = album.band_id;
+
+SELECT band_id , COUNT(band_id) FROM album
+GROUP BY band_id ;
+
+SELECT b.name AS band_name, SUM(a.id) AS id_sum_albums, COUNT(a.id) as count_albums
+FROM bands AS b
+RIGHT JOIN album AS a ON b.id = a.band_id
+GROUP BY b.id;
+```
